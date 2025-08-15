@@ -4,7 +4,8 @@
 
 <a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Page-Green'></a> 
 <a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
-<a href='https://huggingface.co/spaces/derektan95/search-tta-demo'><img src='https://img.shields.io/badge/🤗%20Hugging%20Face-Spaces-yellow'></a>
+<a href='https://huggingface.co/datasets/derektan95/search-tta-dataset'><img src='https://img.shields.io/badge/%20Hugging%20Face-Dataset-yellow'></a>
+<a href='https://huggingface.co/spaces/derektan95/search-tta-demo'><img src='https://img.shields.io/badge/🤗%20Hugging%20Face-Demo-yellow'></a>
 
 
 <img src="assets/Real_Drone_Yosemite_1500bitrate_25fps.gif" width="90%"/>
