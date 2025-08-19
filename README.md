@@ -14,11 +14,35 @@
 
 <br>
 
-## Code Implementation
+## 🔥 Visual Search Dataset
+
+<div align="center">
+    <img src="assets/avs_dataset_misc_examples_v1.jpg" width="90%"/>
+</div>
+
+<br>
+
+### Target Location Datasets
+We release the following training & evaluation datasets with target locations annotations:
+
+* [Quad-modal](https://huggingface.co/datasets/derektan95/search-tta-dataset): Sat-Text-Image-Sound pairing modalities
+* [Tri-modal](https://huggingface.co/datasets/derektan95/search-tta-dataset/viewer/clip_train_trimodal): Sat-Text-Image pairing modalities
+
+<br>
+In order to run the training and eval code, you have to download the following raw data files: 
+
+### Satellite & Sound Images
+Download the [raw data zip files](), or run the download scripts from `Taxabind/scripts/`.
+
+### iNaturalist Ground Images
+Download the [raw data]() and [json zip files]() from the [iNaturalist website]().
+
+
+## 📚 Code Implementation
 Code will be made available soon.
 
 
-## References
+## 🔍 References
 If you intend to use our work in your research, please cite the following publication:
 ```
 @inproceedings{tan2025searchtta,
