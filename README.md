@@ -168,8 +168,8 @@ The structure of our codebase is as follows:
 
 ## 📊 Training 
 If you would like, you may follow the instructions below to train the satellite image encoder, sound encoder, and RL planner policy. 
-Else, you can skip to the [Inference section](#🚀-inference) below to run the pre-trained models from huggingface.
-Note that you will need to [download the full dataset for training](#🔥-avs-bench-dataset) the satelite image / sound encoders.
+Else, you can skip to the [Inference section](#evaluate-search-tta) below to run the pre-trained models from huggingface.
+Note that you will need to [download the full dataset for training](#satellite-images-&-sound-data) the satelite image / sound encoders.
 
 ### SatBind
 To train the satellite image encoder, follow the steps below. 
@@ -212,7 +212,7 @@ tensorboard --logdir=train/logs
 <!-------------------- Inference -------------------->
 
 ## 🚀 Inference
-Note that you will need to [download at least the partial dataset](#🔥-avs-bench-dataset) for evaluation</b> of Search-TTA.
+Note that you will need to [download at least the partial dataset](#satellite-images-&-sound-data) for evaluation</b> of Search-TTA.
 
 <div align="center">
     <img src="assets/search_tta_architecture.png" width="95%"/>
