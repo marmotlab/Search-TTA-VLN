@@ -63,7 +63,7 @@ We release the following [training & evaluation datasets]((https://huggingface.c
     * [Search Evaluation](https://huggingface.co/datasets/derektan95/search-tta-dataset/viewer/search_eval_trimodal)
 
 
-### Satellite Images & Sound Data
+### Satellite Images and Sound Data
 For convenience, you may directly download the satellite images and sound zip files from the links below.
 Alternatively, you may run the scripts from `taxabind_avs/scripts/` that download data from Taxabind's [iSatNat](https://huggingface.co/datasets/MVRL/iSatNat) and [iSoundNat](https://huggingface.co/datasets/MVRL/iSoundNat) datasets. 
 Note that you should <b>download the partial dataset if you only want to run evals</b>. 
@@ -169,7 +169,7 @@ The structure of our codebase is as follows:
 ## 📊 Training 
 If you would like, you may follow the instructions below to train the satellite image encoder, sound encoder, and RL planner policy. 
 Else, you can skip to the [Inference section](#evaluate-search-tta) below to run the pre-trained models from huggingface.
-Note that you will need to [download the full dataset for training](#satellite-images-&-sound-data) the satelite image / sound encoders.
+Note that you will need to [download the full dataset for training](#satellite-images-and-sound-data) the satelite image / sound encoders.
 
 ### SatBind
 To train the satellite image encoder, follow the steps below. 
@@ -212,7 +212,7 @@ tensorboard --logdir=train/logs
 <!-------------------- Inference -------------------->
 
 ## 🚀 Inference
-Note that you will need to [download at least the partial dataset](#satellite-images-&-sound-data) for evaluation</b> of Search-TTA.
+Note that you will need to [download at least the partial dataset](#satellite-images-and-sound-data) for evaluation</b> of Search-TTA.
 
 <div align="center">
     <img src="assets/search_tta_architecture.png" width="95%"/>
