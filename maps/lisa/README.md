@@ -1,0 +1,1 @@
+Please follow instructions from the parent README.md of this repository to learn how to download the val score maps for LISA.

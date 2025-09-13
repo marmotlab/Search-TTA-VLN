@@ -1,0 +1,1 @@
+This folder is adapted from the [Taxabind repository](https://github.com/mvrl/TaxaBind).
