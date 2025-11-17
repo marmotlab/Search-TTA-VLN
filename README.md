@@ -287,10 +287,13 @@ We would like to thank the authors for their great work. Please refer to their p
 If you intend to use our work in your research, please cite the following publication:
 ```bibtex
 @inproceedings{tan2025searchtta,
-    title={Search-{TTA}: A Multi-Modal Test-Time Adaptation Framework for Visual Search in the Wild},
-    author={Derek Ming Siang Tan and Shailesh and Boyang Liu and Alok Raj and Qi Xuan Ang and Weiheng Dai and Tanishq Duhan and Jimmy Chiun and Yuhong Cao and Florian Shkurti and Guillaume Adrien Sartoretti},
-    booktitle={9th Annual Conference on Robot Learning},
+    title={Search-TTA: A Multi-Modal Test-Time Adaptation Framework for Visual Search in the Wild},
+    author={Tan, Derek Ming Siang and Shailesh, Shailesh and Liu, Boyang and Raj, Alok and Ang, Qi Xuan and Dai, Weiheng and Duhan, Tanishq and Chiun, Jimmy and Cao, Yuhong and Shkurti, Florian and Sartoretti, Guillaume Adrien},
+    booktitle={Proceedings of The 9th Conference on Robot Learning},
+    pages={2093--2120},
     year={2025},
-    url={https://openreview.net/forum?id=iVbCWUDyBF}
+    volume={305},
+    publisher={PMLR},
+    url={https://proceedings.mlr.press/v305/tan25a.html}
 }
 ```
