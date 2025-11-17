@@ -293,7 +293,6 @@ If you intend to use our work in your research, please cite the following public
     pages={2093--2120},
     year={2025},
     volume={305},
-    publisher={PMLR},
-    url={https://proceedings.mlr.press/v305/tan25a.html}
+    publisher={PMLR}
 }
 ```
