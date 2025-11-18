@@ -2,9 +2,9 @@
 
 <div align="center">
 
-<a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Website-Green'></a> 
-<a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
-<a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/ICRA-Workshop-blue'></a>
+<a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Website-green'></a> 
+<a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/Arxiv-Paper-red'></a>
+<a href='https://github.com/search-tta/context-mask-search-priors/blob/main/ICRA2024_Context_Mask_Priors_via_Vision_Language_Model_for_Ergodic_Search.pdf'><img src='https://img.shields.io/badge/ICRA-Workshop-blue'></a>
 <a href='https://huggingface.co/datasets/derektan95/avs-bench'><img src='https://img.shields.io/badge/🤗%20AVS%20Bench-Dataset-orange'></a>
 <a href='https://huggingface.co/spaces/derektan95/search-tta-demo'><img src='https://img.shields.io/badge/🤗%20Search%20TTA-Demo-yellow'></a>
 <a href='https://huggingface.co/spaces/derektan95/LISA-AVS-demo'><img src='https://img.shields.io/badge/🤗%20LISA%20AVS-Demo-yellow'></a>
