@@ -7,15 +7,6 @@
 [![HF Models](https://img.shields.io/badge/AVS-Dataset-green?style=for-the-badge)](https://huggingface.co/datasets/derektan95/avs-bench)
 [![HF Demo](https://img.shields.io/badge/%F0%9F%A4%97-Demo-yellow?style=for-the-badge)](https://huggingface.co/spaces/derektan95/search-tta-demo)
 
-<!-- <a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Website-green'></a> 
-<a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/Arxiv-Paper-red'></a>
-<a href='https://github.com/search-tta/context-mask-search-priors/blob/main/ICRA2024_Context_Mask_Priors_via_Vision_Language_Model_for_Ergodic_Search.pdf'><img src='https://img.shields.io/badge/ICRA-Workshop-blue'></a>
-<a href='https://huggingface.co/datasets/derektan95/avs-bench'><img src='https://img.shields.io/badge/%20AVS%20Bench-Dataset-orange'></a>
-<a href='https://huggingface.co/spaces/derektan95/search-tta-demo'><img src='https://img.shields.io/badge/🤗%20Search%20TTA-Demo-yellow'></a>
-<a href='https://huggingface.co/spaces/derektan95/LISA-AVS-demo'><img src='https://img.shields.io/badge/🤗%20LISA%20AVS-Demo-yellow'></a> -->
-
-
-<!-- <img src="assets/real_expt_crazyflie_yosemite.gif" width="90%"/> -->
 <img src="assets/search_tta_turtle_example.gif" width="90%"/>
 
 Search-TTA is compatible with different robots (e.g. UAV / UGV / AUV) and planners (e.g. RL / IS).
@@ -34,28 +25,18 @@ Search-TTA is compatible with different robots (e.g. UAV / UGV / AUV) and planne
 <!-------------------- Overview -------------------->
 
 ## 🦁 Introduction
-<!-- TODO: Change! Something more tied to VLNs -->
 Our work addresses the challenges of autonomous outdoor visual navigation and search where targets cannot be directly seen from satellite images. 
 We introduce <b>Search-TTA</b>, a multimodal test-time adaptatation framework that <b>signifiantly corrects poor VLM predictions due to domain mismatch or the lack of training data</b>, given various input modalities (e.g. image, text, sound) and planning methods (e.g. RL).
-<!--
-Our contributions includes:
-* <b>AVS-Bench</b>: a large-scale dataset of satellite image to taxonomic target locations, paired with data of other modalities (i.e. image / text / sound).
-* <b>Multimodal Segmentation</b>: a methodology to generate CLIP score maps via inputs of various modality to guide the search planner.
-* <b>Test-Time Adaptation</b>: a statistical update procedure (via Spatial Poisson Point Processes) to refine score maps when gathering new measurements.
--->
-<!-- Experiments demonstrate that Search-TTA significantly improves planner performance by up to 30%, and performs comparably to significantly larger state-of-the-art VLMs.-->
 
 <br>
 <div align="center">
     <img src="assets/yosemite_bear_poster.png" width="100%"/>
 </div>
 
-<!-- <b>`NOTE`</b>: You may skip to the [eval section](#evaluate-search-tta) for a quickstart guide (you'll need to install the [partial dataset](#satellite-images-and-sound-data)). -->
 
 <!-------------------- Dataset -------------------->
 
 ## 🔥 AVS-Bench Dataset
-
 To train and evaluate Search-TTA, we curate AVS-Bench, a visual search dataset based on internet-scale ecological data comprising
 satellite images, each with targets and their corresponding ground-level image and taxonomic label and sound data. 
 It contains 380k training and 8k validation images (in- and out-domain).
@@ -101,7 +82,7 @@ Note that you should <b>download the partial dataset if you only want to run eva
 You must download the datasets from the above links, and organize them as follows. 
 
 `Note`: You will need to download at least the `partial datset` from above if you want to only perform evals. If you would like to train the satellite image or sound encoder, please download the `full dataset`.
-<!--The total partial dataset size for evals is ~2GB, while full dataset size for training is around ~350GB.-->
+The total partial dataset size for evals is ~2GB, while full dataset size for training is around ~350GB.
 
 ```
 ├── avs_bench_ds
@@ -145,31 +126,16 @@ You must download the datasets from the above links, and organize them as follow
 ## 📚 Code Overview
 
 ### Requirements
-<!-- TODO: Change! -->
 This repository was tested using the following dependencies on Ubuntu 20.04. You may install the conda environment as such: 
 ```bash
 conda create -n search-tta python=3.10
 pip install -r requirements.txt
 ```
 
-<!-- <details> -->
-<!-- <summary>Dependencies List</summary> -->
-<!-- * python==3.10.14
-* numpy==1.26.3
-* torch==2.4.1
-* torchvision==0.19.1 
-* torchaudio==2.4.1
-* pytorch-lightning==2.2.1
-* open_clip_torch==2.30.0
-* transformers==4.45.1
-* tokenizers==0.20.3 -->
-<!-- </details> -->
-
 <details>
-<summary>Code Structure</summary>
+<summary>📝 Code Structure</summary>
 
 ### Code Structure
-<!-- TODO: Change! -->
 The structure of our codebase is as follows:
 
 * `eval/` evaluation shellscripts to evaluate Search-TTA.
@@ -196,7 +162,7 @@ Note that you will need to [download the full dataset for training](#satellite-i
 ### SatBind
 To train the satellite image encoder, follow the steps below. 
 It automatically downloads the [`tri_modal dataset`](https://huggingface.co/datasets/derektan95/avs-bench/viewer/clip_tri_modal) from Huggingface, and trains the satellite image encoder to align to the same representation space as BioCLIP's ground image encoder.
- that you should adjust the `avs_ds_dir` parameter in `config_sat.py` to match your downloaded dataset directories. 
+Note that you should adjust the `avs_ds_dir` parameter in `config_sat.py` to match your downloaded dataset directories. 
 We offer the [finetuned sat encoder checkpoint here](https://huggingface.co/derektan95/search-tta-sat).
 <!-- Adjust the `batch_size`, `accumulate_grad_batches`, `num_workers`, and `devices` parameters to match your training hardware specifications. -->
 
@@ -300,8 +266,6 @@ Our project is based on the following works:
 * [iNaturalist CVPR Challenge 2021](https://github.com/visipedia/inat_comp/tree/master/2021)
 * [LISA](https://github.com/dvlab-research/LISA)
 * [ARiADNE RL Planner](https://github.com/marmotlab/ARiADNE)
-<!-- * [IR2 RL Planner](https://ir2-explore.github.io/) -->
-
 
 We would like to thank the authors for their great work. Please refer to their papers for more details.
 
