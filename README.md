@@ -2,12 +2,17 @@
 
 <div align="center">
 
-<a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Website-green'></a> 
+[![Project Website](https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge&logo=google-chrome)](https://search-tta.github.io/)
+[![arXiv](https://img.shields.io/badge/arXiv-2505.11350-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2505.11350)
+[![HF Models](https://img.shields.io/badge/AVS-Dataset-green?style=for-the-badge)](https://huggingface.co/datasets/derektan95/avs-bench)
+[![HF Demo](https://img.shields.io/badge/%F0%9F%A4%97-Demo-yellow?style=for-the-badge)](https://huggingface.co/spaces/derektan95/search-tta-demo)
+
+<!-- <a href='https://search-tta.github.io/'><img src='https://img.shields.io/badge/Project-Website-green'></a> 
 <a href='https://arxiv.org/abs/2505.11350'><img src='https://img.shields.io/badge/Arxiv-Paper-red'></a>
 <a href='https://github.com/search-tta/context-mask-search-priors/blob/main/ICRA2024_Context_Mask_Priors_via_Vision_Language_Model_for_Ergodic_Search.pdf'><img src='https://img.shields.io/badge/ICRA-Workshop-blue'></a>
-<a href='https://huggingface.co/datasets/derektan95/avs-bench'><img src='https://img.shields.io/badge/🤗%20AVS%20Bench-Dataset-orange'></a>
+<a href='https://huggingface.co/datasets/derektan95/avs-bench'><img src='https://img.shields.io/badge/%20AVS%20Bench-Dataset-orange'></a>
 <a href='https://huggingface.co/spaces/derektan95/search-tta-demo'><img src='https://img.shields.io/badge/🤗%20Search%20TTA-Demo-yellow'></a>
-<a href='https://huggingface.co/spaces/derektan95/LISA-AVS-demo'><img src='https://img.shields.io/badge/🤗%20LISA%20AVS-Demo-yellow'></a>
+<a href='https://huggingface.co/spaces/derektan95/LISA-AVS-demo'><img src='https://img.shields.io/badge/🤗%20LISA%20AVS-Demo-yellow'></a> -->
 
 
 <!-- <img src="assets/real_expt_crazyflie_yosemite.gif" width="90%"/> -->
@@ -21,11 +26,10 @@ Search-TTA is compatible with different robots (e.g. UAV / UGV / AUV) and planne
 <!-------------------- News -------------------->
 ## 📢 News / To-Dos
 - [ ] Release [ROS2 simulation code for UAV/UGV](#custom-planners).
-- [x] [Sept 25]: We abstracted our codebase to work with custom score maps, environments, and planners. Feel free to adapt this to your [navigation/search problem formulation](#custom-score-maps)! 🛩️
-- [x] [Sept 25]: We release LISA-AVS, a [LISA](https://github.com/dvlab-research/LISA) 7B VLM finetuned on AVS-Bench to output score maps and text explanations given input satellite images and text queries. Check out our [LISA-AVS demo here](https://huggingface.co/spaces/derektan95/LISA-AVS-demo)! 🔥 
-- [x] [Sept 25]: We release our AVS RL policy pre-trained on [AVS-Bench](https://huggingface.co/datasets/derektan95/avs-bench) score maps 🦁  
-- [x] [Sept 25]: Initial release of Search-TTA and AVS-Bench. Check out our [Search-TTA demo here](https://huggingface.co/spaces/derektan95/search-tta-demo)! 🚀
-- [x] [Aug 25]: Our paper is accepted at the [Conference of Robot Learning (CoRL 2025)](https://www.corl.org/)! 🇰🇷
+- [x] [Sept 25]: We release LISA-AVS, a [LISA](https://github.com/dvlab-research/LISA) 7B VLM finetuned on AVS-Bench to output score maps and text explanations given input satellite images and text queries. Check out our [LISA-AVS demo here](https://huggingface.co/spaces/derektan95/LISA-AVS-demo).
+- [x] [Sept 25]: We release our AVS RL policy pre-trained on [AVS-Bench](https://huggingface.co/datasets/derektan95/avs-bench) score maps.
+- [x] [Sept 25]: Initial release of Search-TTA and AVS-Bench. Check out our [Search-TTA demo here](https://huggingface.co/spaces/derektan95/search-tta-demo).
+- [x] [Aug 25]: Our paper is accepted at the [Conference of Robot Learning (CoRL 2025)](https://www.corl.org/).
 
 <!-------------------- Overview -------------------->
 
@@ -33,10 +37,12 @@ Search-TTA is compatible with different robots (e.g. UAV / UGV / AUV) and planne
 <!-- TODO: Change! Something more tied to VLNs -->
 Our work addresses the challenges of autonomous outdoor visual navigation and search where targets cannot be directly seen from satellite images. 
 We introduce <b>Search-TTA</b>, a multimodal test-time adaptatation framework that <b>signifiantly corrects poor VLM predictions due to domain mismatch or the lack of training data</b>, given various input modalities (e.g. image, text, sound) and planning methods (e.g. RL).
+<!--
 Our contributions includes:
 * <b>AVS-Bench</b>: a large-scale dataset of satellite image to taxonomic target locations, paired with data of other modalities (i.e. image / text / sound).
 * <b>Multimodal Segmentation</b>: a methodology to generate CLIP score maps via inputs of various modality to guide the search planner.
 * <b>Test-Time Adaptation</b>: a statistical update procedure (via Spatial Poisson Point Processes) to refine score maps when gathering new measurements.
+-->
 <!-- Experiments demonstrate that Search-TTA significantly improves planner performance by up to 30%, and performs comparably to significantly larger state-of-the-art VLMs.-->
 
 <br>
@@ -44,11 +50,15 @@ Our contributions includes:
     <img src="assets/yosemite_bear_poster.png" width="100%"/>
 </div>
 
-<b>`NOTE`</b>: You may skip to the [eval section](#evaluate-search-tta) for a quickstart guide (you'll need to install the [partial dataset](#satellite-images-and-sound-data)). 
+<!-- <b>`NOTE`</b>: You may skip to the [eval section](#evaluate-search-tta) for a quickstart guide (you'll need to install the [partial dataset](#satellite-images-and-sound-data)). -->
 
 <!-------------------- Dataset -------------------->
 
 ## 🔥 AVS-Bench Dataset
+
+To train and evaluate Search-TTA, we curate AVS-Bench, a visual search dataset based on internet-scale ecological data comprising
+satellite images, each with targets and their corresponding ground-level image and taxonomic label and sound data. 
+It contains 380k training and 8k validation images (in- and out-domain).
 
 <div align="center">
     <img src="assets/avs_bench_examples.jpg" width="95%"/>
@@ -56,8 +66,12 @@ Our contributions includes:
 
 <br>
 
+<details>
+<summary><b>📝 Download Instructions </b></summary>
+    
 ### Target Location Datasets
-We release the following [training & evaluation datasets]((https://huggingface.co/datasets/derektan95/avs-bench)) with target locations annotations on Huggingface. These datasets will automatically be downloaded for training and inference, although you will <b>still need to download the raw satellite images and iNaturalist files</b> in the following sections. 
+We release the following [training & evaluation datasets]((https://huggingface.co/datasets/derektan95/avs-bench)) with target locations annotations on Huggingface. 
+These datasets will automatically be downloaded for training and inference, although you will <b>still need to download the raw satellite images and iNaturalist files</b> in the following sections. 
 
 * `Quad-modal`: Sat-Text-Image-Sound pairing modalities 
     * [CLIP Training](https://huggingface.co/datasets/derektan95/avs-bench/viewer/clip_quad_modal)
@@ -124,6 +138,8 @@ You must download the datasets from the above links, and organize them as follow
 │               └── ...
 ```
 
+</details>
+
 <!-------------------- Overview -------------------->
 
 ## 📚 Code Overview
@@ -149,12 +165,12 @@ pip install -r requirements.txt
 * tokenizers==0.20.3 -->
 <!-- </details> -->
 
+<details>
+<summary>Code Structure</summary>
 
 ### Code Structure
 <!-- TODO: Change! -->
 The structure of our codebase is as follows:
-<!-- <details> -->
-<!-- <summary>Code Structure</summary> -->
 
 * `eval/` evaluation shellscripts to evaluate Search-TTA.
 * `planner/` planner framework scripts of Search-TTA.
@@ -165,8 +181,7 @@ The structure of our codebase is as follows:
   * `satbind/` training & TTA scripts for satellite image encoder.
   * `soundbind/` training scripts for sound encoder.
   * `scripts/` scripts to download inat raw datasets.
-<!-- </details> -->
-
+</details>
 
 <!-------------------- Training -------------------->
 
@@ -175,10 +190,13 @@ If you would like, you may follow the instructions below to train the satellite 
 Else, you can skip to the [Inference section](#evaluate-search-tta) below to run the pre-trained models from huggingface.
 Note that you will need to [download the full dataset for training](#satellite-images-and-sound-data) the satelite image / sound encoders.
 
+<details>
+<summary><b>📝 Details</b></summary>
+
 ### SatBind
 To train the satellite image encoder, follow the steps below. 
 It automatically downloads the [`tri_modal dataset`](https://huggingface.co/datasets/derektan95/avs-bench/viewer/clip_tri_modal) from Huggingface, and trains the satellite image encoder to align to the same representation space as BioCLIP's ground image encoder.
-Note that you should adjust the `avs_ds_dir` parameter in `config_sat.py` to match your downloaded dataset directories. 
+ that you should adjust the `avs_ds_dir` parameter in `config_sat.py` to match your downloaded dataset directories. 
 We offer the [finetuned sat encoder checkpoint here](https://huggingface.co/derektan95/search-tta-sat).
 <!-- Adjust the `batch_size`, `accumulate_grad_batches`, `num_workers`, and `devices` parameters to match your training hardware specifications. -->
 
@@ -213,6 +231,7 @@ python -m planner.driver
 tensorboard --logdir=train/logs
 ```
 
+</details>
 
 <!-------------------- Inference -------------------->
 
@@ -228,7 +247,7 @@ Note that you will need to [download at least the partial dataset](#satellite-im
 ### Evaluate Search-TTA
 
 To run Search-TTA with RL or Information Surfing (IS) planner, follow the steps below. 
-It automatically downloads the eval splits of [AVS-Bench](https://huggingface.co/datasets/derektan95/avs-bench) and the trained encoder checkpoints from Huggingface.
+It automatically downloads the eval splits of AVS-Bench and the trained encoder checkpoints from Huggingface.
 You may test our approach on image, text, or sound input modalities.
 Note that you should adjust `AVS_DS_DIR`, `NUM_GPU`, and `NUM_META_AGENTS` parameters in `test_parameter.py` to match your hardware specifications.
 
@@ -247,6 +266,8 @@ cd taxabind_avs/satbind
 python clip_seg_tta.py
 ```
 
+<details>
+<summary><b>📝 Additional Customizations</b></summary>
 
 ### Custom Score Maps
 
@@ -260,6 +281,9 @@ Instead of retrieving targets from AVS-Bench, you can override the target positi
 ### Custom Planners
 
 Instead of using our Reinforcement Learning (RL) or Information Surfing (IS) based planner, you may use your own custom planners. For this, initialize another script that is similar to `test_worker.py` or `test_info_surfing.py`, and interface it with the Ray framework in `test_driver.py` and search environment in `env.py`.
+
+</details>
+
 
 ## 🛩️ ROS2 Integration
 <img src="assets/real_expt_crazyflie_yosemite.gif" width="90%"/>
@@ -276,7 +300,7 @@ Our project is based on the following works:
 * [iNaturalist CVPR Challenge 2021](https://github.com/visipedia/inat_comp/tree/master/2021)
 * [LISA](https://github.com/dvlab-research/LISA)
 * [ARiADNE RL Planner](https://github.com/marmotlab/ARiADNE)
-* [IR2 RL Planner](https://ir2-explore.github.io/)
+<!-- * [IR2 RL Planner](https://ir2-explore.github.io/) -->
 
 
 We would like to thank the authors for their great work. Please refer to their papers for more details.
