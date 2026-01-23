@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Project Website](https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge&logo=google-chrome)](https://search-tta.github.io/)
-[![arXiv](https://img.shields.io/badge/arXiv-2505.11350-df2a2a.svg?style=for-the-badge)](https://arxiv.org/abs/2505.11350)
+[![arXiv](https://img.shields.io/badge/arXiv-2505.11350-df2a2a.svg?style=for-the-badge)](https://arxiv.org/pdf/2505.11350)
 [![HF Models](https://img.shields.io/badge/AVS-Dataset-green?style=for-the-badge)](https://huggingface.co/datasets/derektan95/avs-bench)
 [![HF Demo](https://img.shields.io/badge/%F0%9F%A4%97-Demo-yellow?style=for-the-badge)](https://huggingface.co/spaces/derektan95/search-tta-demo)
 
