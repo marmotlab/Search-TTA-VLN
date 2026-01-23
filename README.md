@@ -157,7 +157,7 @@ Else, you can skip to the [Inference section](#evaluate-search-tta) below to run
 Note that you will need to [download the full dataset for training](#satellite-images-and-sound-data) the satelite image / sound encoders.
 
 <details>
-<summary><b>📝 Details</b></summary>
+<summary><b>📝 Training Details</b></summary>
 
 ### SatBind
 To train the satellite image encoder, follow the steps below. 
